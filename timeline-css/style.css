@@ -1,0 +1,81 @@
+body {
+    --circle-dia: 20px;
+    --line-width: 6px;
+
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    margin-inline: auto;
+    margin-top: 40px;
+    width: min(600px, 60%);
+}
+
+.milestone {
+    display: flex;
+}
+
+/* .milestone > * {
+    outline: 2px solid blue;
+} */
+
+.month {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.month p {
+    text-align: center;
+}
+
+.line-and-circle {
+    position: relative;
+    flex: 0 0  40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.milestone:not(:first-child) .line-and-circle::before {
+    content: '';
+    position: absolute;
+    background-color: brown;
+    width: var(--line-width);
+    height: 50%;
+    top: 0px;
+    /* the code goes here */
+}
+
+.milestone:not(:last-child) .line-and-circle::after {
+    content: '';
+    position: absolute;
+    background-color: brown;
+    width: var(--line-width);
+    height: 50%;
+    bottom: 0px;
+}
+
+.circle {
+    width: var(--circle-dia);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+.milestone-description {
+    flex: 1 0 auto;
+    padding-inline: 20px;
+}
+
+.milestone-description p {
+    margin-top: 15px;
+}

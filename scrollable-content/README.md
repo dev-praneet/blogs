@@ -1,0 +1,1 @@
+This code for scrollable modal is used in this [blog post](https://mytechrepo8.wordpress.com/2024/06/22/making-scrollable-content-with-fixed-header-and-footer/) titled `Making scrollable content with fixed header and footer`.
